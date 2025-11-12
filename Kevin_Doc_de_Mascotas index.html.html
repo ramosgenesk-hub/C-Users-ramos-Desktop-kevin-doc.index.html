@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Doctor de Mascotas</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/616/616408.png">
+  <style>
+    
+    iframe{
+
+      border-radius: 15px;
+      margin: 10px;
+    }
+     /* === Fondo con imagen + degradado === */
+ body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #333;
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url("https://cdn.pixabay.com/photo/2017/12/09/08/18/dogs-3009403_1280.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+  body {
+    background-color: #fdfdfd;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    color: #333;
+  }
+
+  header { ... }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background: #a29bfe;
+    padding: 10px;
+  }
+
+  /* === Estilos de pestañas === */
+  .tab-container {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+  }
+
+  nav button { ... }
+
+    body {
+      background-color: #fdfdfd;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background-color: #74b9ff;
+      color:blue;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #a29bfe;
+      padding: 10px;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    nav button:hover, nav button.active {
+      background: #6c5ce7;
+      border-radius: 5px;
+    }
+    .tab-content {
+      display: none;
+      padding: 30px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #dfe6e9;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #636e72;
+      margin-top: 40px;
+    }
+    button.contacto {
+      background: #55efc4;
+      color: #2d3436;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 20px;
+    }
+    button.contacto:hover {
+      background: #00b894;
+      color: white;
+    }
+    <!-- seccion de videos locales -->
+
+  <div id="videos" class="tab-content">
+    <h2>videos de Mascotas</h2>
+    <p>disfruta algunos videos adortables de perros y gatos:</p>
+
+    <div class="videos-container">
+      <iframe width="420" height="240" src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="video de mascotas 1" frameborder="0"allowfullscreen></iframe>
+
+       <iframe width="420" height="240" src="https://www.youtube.com/embed/5qap5a04i9a" title="video de mascotas 1" frameborder="0"allowfullscreen></iframe>
+      
+
+     
+    </div>
+  </div>
+
+  </style>
+</head>
+<body>
+
+  <header>🐶🐱 Kevin Doc de Mascotas 🐾</header>
+  <!-- pestañas -->
+   <div class="tab-container">
+      <button class="tab" onclick="opentab( 'info', 'info-bg')">informacion</button>
+      <button class="tab" onclick="openTab('galeria','galeria-bg)">galeria</button>
+      <button class="tab" onclick="openTab('contacto','contacto-bg')">Contacto</button>
+
+   </div>
+<!--contenido de las pestañas -->
+  <nav>
+    <button class="tab active" onclick="openTab(event, 'inicio')">Inicio</button>
+    <button class="tab" onclick="openTab(event, 'galeria')">Galería</button>
+    <button class="tab" onclick="openTab(event, 'contacto')">Contacto</button>
+  </nav>
+
+  <div id="info" class="tab-content active">
+    <h2>Bienvenido a Kevin Doc de Mascotas</h2>
+    <p>En esta página encontrarás fotos adorables de perros y gatos, además de consejos para cuidar a tus compañeros peludos. 🐕🐈</p>
+    <img src="perro.jpg..jpg" alt="Perro feliz" width="400" style="border-radius:15px;">
+  </div>
+
+  <div id="galeria" class="tab-content">
+    <h2>Galería de Mascotas</h2>
+    <div class="gallery">
+      <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_1280.jpg" alt="Perro 1">
+      <img src="perro 2.jpg..jpg" alt="Perro 2">
+      <img src="https://cdn.pixabay.com/photo/2015/03/27/13/16/cat-694730_1280.jpg" alt="Gato 1">
+      <img src="perro 3.jpg..jpg" alt="Gato 2">
+      <img src="perro 3.jpg..jpg" alt="Perro 3">
+      <img src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg" alt="Gato 3">
+    </div>
+  </div>
+
+  <div id="contacto" class="tab-content">
+    <h2>Contáctanos</h2>
+    <p>¿Quieres adoptar, donar o saber más sobre el cuidado de mascotas? 🦴</p>
+    <button class="contacto" onclick="alert('¡Gracias por tu interés! 🐾 Pronto te contactaremos.')">Enviar mensaje</button>
+  </div>
+   <!-- seccion de videos locales -->
+
+  <div id="videos" class="tab-content">
+    <h2>videos de Mascotas</h2>
+    <p>disfruta algunos videos adortables de perros y gatos:</p>
+
+    <div class="videos-container">
+      <iframe width="420" height="240" src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="video de mascotas 1" frameborder="0"allowfullscreen></iframe>
+
+       <iframe width="420" height="240" src="https://www.youtube.com/embed/5qap5a04i9a" title="video de mascotas 1" frameborder="0"allowfullscreen></iframe>
+      
+
+     
+    </div>
+
+  <footer>
+    © 2025 Kevin Doc de Mascotas | Amor y cuidado para cada huella 🐾
+  </footer>
+
+  <script>
+    function openTab(evt, tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(c => c.classList.remove('active'));
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(t => t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
+
+   <!-- seccion de videos locales -->
+
+  <div id="videos" class="tab-content">
+    <h2>videos de Mascotas</h2>
+    <p>disfruta algunos videos adortables de perros y gatos:</p>
+
+    <div class="videos-container">
+      <iframe width="420" height="240" src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="video de mascotas 1" frameborder="0"allowfullscreen></iframe>
+
+       <iframe width="420" height="240" src="https://www.youtube.com/embed/5qap5a04i9a" title="video de mascotas 1" frameborder="0"allowfullscreen></iframe>
+      
+
+     
+    </div>
+
+</body>
+</html>
